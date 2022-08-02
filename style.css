@@ -1,0 +1,402 @@
+* 
+{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+body 
+{
+  background: hsl(230, 17%, 14%);
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+
+.main 
+{
+  margin: 10px 100px;
+  min-height: 100vh;
+}
+
+header 
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px;
+  padding: 10px;
+  position: relative;
+}
+
+.heading
+{
+  display: block;
+  height: 100px;
+  color: white;
+}
+
+header .dark-light 
+{
+  margin: 10px 10px 10px auto;
+}
+
+.toggle 
+{
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 40px;
+  pointer-events: none;
+}
+
+.toggle input 
+{
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: all;
+}
+
+.slider 
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  pointer-events: none;
+  transition: 0.4s;
+  background: linear-gradient(
+    hsl(210, 78%, 56%),
+    hsl(146, 68%, 55%)
+  ); 
+
+}
+
+.slider::before 
+{
+  content: "";
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  left: 8px;
+  bottom: 8px;
+  background-color: #222;
+  transition: 0.2s ease-in-out;
+  pointer-events: none;
+}
+
+input:checked + .slider 
+{
+  
+  background: #808080;
+}
+
+input:checked + .slider::before 
+{
+  transform: translateX(40px);
+  background-color: #fff;
+}
+
+.slider.round 
+{
+  border-radius: 34px;
+}
+
+.slider.round::before 
+{
+  border-radius: 50%;
+}
+
+.top-container 
+{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 10px;
+  margin: 20px;
+  gap: 20px;
+}
+
+.top-container ul li 
+{
+  list-style: none;
+  text-align: center;
+  height: 50px;
+  font-weight: 400;
+}
+
+.facebook ul,
+.twitter ul,
+.instagram ul,
+.youtube ul 
+{
+  margin: auto 0px;
+  background: hsl(228, 28%, 20%);
+  border-radius: 5px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.facebook ul:hover,
+.twitter ul:hover,
+.instagram ul:hover,
+.youtube ul:hover 
+{
+  background: rgb(224, 224, 224);
+  border-radius: 0;
+}
+
+.facebook ul 
+{
+  border-top: 3px solid hsl(208, 92%, 53%);
+}
+
+.facebook .num 
+{
+  color: hsl(163, 72%, 41%);
+}
+
+.facebook .fab 
+{
+  color: hsl(208, 92%, 53%);
+  margin: 10px;
+  font-size: 25px;
+}
+
+
+.twitter ul 
+{
+  border-top: 3px solid hsl(203, 89%, 53%);
+}
+
+.twitter .num 
+{
+  color: hsl(163, 72%, 41%);
+}
+
+.twitter .fab 
+{
+  color: hsl(203, 89%, 53%);
+  margin: 10px;
+  font-size: 25px;
+}
+
+.instagram ul 
+{
+  border-top: 3px solid hsl(37, 97%, 70%);
+}
+
+.instagram .num 
+{
+  color: hsl(163, 72%, 41%);
+}
+
+.instagram .fab 
+{
+  color: hsl(329, 70%, 58%);
+  margin: 10px;
+  font-size: 25px;
+}
+
+.youtube ul 
+{
+  border-top: 3px solid hsl(348, 97%, 39%);
+}
+
+.youtube .num 
+{
+  color: hsl(356, 69%, 56%);
+}
+
+.youtube .fab 
+{
+  color: hsl(348, 97%, 39%);
+  margin: 10px;
+  font-size: 25px;
+}
+
+.top-container .count 
+{
+  font-size: 50px;
+  font-weight: 700;
+  color: white;
+}
+
+.top-container .followers 
+{
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: hsl(228, 12%, 44%);
+}
+
+.top-container .head 
+{
+  color: hsl(228, 12%, 44%);
+}
+
+.facebook ul li,
+.twitter ul li,
+.instagram ul li,
+.youtube ul li 
+{
+  padding: 5px;
+  margin: 5px auto;
+  text-align: center;
+}
+
+#today
+{
+  margin: 20px;
+  padding: 10px;
+  font-size: 30px;
+  text-transform: capitalize;
+  color: white;
+}
+
+.overview-main 
+{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 10px;
+  margin: 20px;
+  gap: 20px;
+  min-height: 250px;
+}
+
+.overview-main ul 
+{
+  list-style: none;
+  text-align: center;
+  height: 0%;
+  font-weight: 400;
+}
+
+#down
+{
+  color:hsl(348, 97%, 39%);
+}
+
+#up
+{
+  color: hsl(163, 72%, 41%);
+}
+
+.fb-views,
+.fb-likes,
+.insta-likes,
+.insta-views,
+.retweets,
+.twitter-likes,
+.youtube-likes,
+.youtube-views 
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 100px;
+  float: left;
+  background: hsl(228, 28%, 20%);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.fb-views:hover,
+.fb-likes:hover,
+.insta-likes:hover,
+.insta-views:hover,
+.retweets:hover,
+.twitter-likes:hover,
+.youtube-likes:hover,
+.youtube-views:hover 
+{
+  background: rgb(224, 224, 224);
+}
+
+.fb-views li,
+.fb-likes li,
+.insta-likes li,
+.insta-views li,
+.retweets li,
+.twitter-likes li,
+.youtube-likes li,
+.youtube-views li 
+{
+  margin: 20px 0;
+  margin-right: auto;
+}
+
+.fb-views .fab,
+.fb-likes .fab 
+{
+  color: hsl(208, 92%, 53%);
+  font-size: 25px;
+}
+
+.insta-likes .fab,
+.insta-views .fab 
+{
+  color: hsl(329, 70%, 58%);
+  font-size: 25px;
+}
+
+.twitter-likes .fab,
+.retweets .fab 
+{
+  color: hsl(203, 89%, 53%);
+  font-size: 20px;
+}
+
+.youtube-views .fab,
+.youtube-likes .fab 
+{
+  color: hsl(348, 97%, 39%);
+  font-size: 20px;
+}
+
+.overview-main .head 
+{
+  text-transform: capitalize;
+  color: hsl(228, 12%, 44%);
+}
+
+.overview-main .count 
+{
+  font-size: 23px;
+  font-weight: 700;
+  margin: 5px 0;
+  color: white;
+}
+
+.fb-views .percent,
+.retweets .percent,
+.insta-likes .percent,
+.insta-views .percent,
+.twitter-likes .percent 
+{
+  color: hsl(163, 72%, 41%);
+  font-size: 14px;
+}
+
+.fb-likes .percent,
+.youtube-likes .percent,
+.youtube-views .percent 
+{
+  color: hsl(356, 69%, 56%);
+  font-size: 14px;
+}
+
+.attribution 
+{ 
+  font-size: 11px; 
+  text-align: center; 
+  margin-bottom: 2rem;
+}
+
+.attribution a 
+{ 
+  color: hsl(228, 45%, 44%); 
+}
+

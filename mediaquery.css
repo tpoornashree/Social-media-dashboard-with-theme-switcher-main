@@ -1,0 +1,56 @@
+@media screen and (max-width: 750px) 
+{
+    .main 
+    {
+      margin: auto 5px;
+    }
+
+    header 
+    {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    header .dark-light 
+    {
+      margin: 20px 10px;
+    }
+  
+    .toggle 
+    {
+      margin: 10px auto;
+    }
+
+    .top-container 
+    {
+      padding: auto;
+      margin: auto;
+    }
+
+    .overview h4 
+    {
+      font-size: 25px;
+      text-align: center;
+    }
+
+    .overview-main 
+    {
+      padding: auto;
+      margin: auto;
+    }
+
+    .fb-views,
+    .fb-likes,
+    .insta-likes,
+    .insta-views,
+    .retweets,
+    .twitter-likes,
+    .youtube-likes,
+    .youtube-views 
+    {
+      height: 120px;
+    }
+    
+  }
+  
+  

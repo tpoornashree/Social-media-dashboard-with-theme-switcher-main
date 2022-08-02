@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/9a691a63d0.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <title>Frontend Mentor | Social media dashboard with theme switcher</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaquery.css" />
+</head>
+
+<body>
+  <div class="main">
+    <header>
+      <div class="heading">
+        <h2 id="h2">Social Media Dashboard</h2>
+        <p id="p">Total Followers: 23,004</p>
+      </div>
+      <div class="dark-light" id="mode">
+        <p>Dark Mode</p>
+      </div>
+      <div class="toggle">
+        <input type="checkbox" id="checkBox" onclick="bgChange()" />
+        <div class="slider round"></div>
+      </div>
+    </header>
+    <section class="top-container">
+      <div class="top facebook">
+        <ul>
+          <li class="head"><i class="fab fa-facebook-square"></i>@nathaf</li>
+          <li class="count">1987</li>
+          <li class="followers">Followers</li>
+          <li class="num"><i style="margin: 10px;" class="fas fa-caret-up" id="up"></i>12 Today</li>
+        </ul>
+      </div>
+      <div class="top twitter">
+        <ul>
+          <li class="head"><i class="fab fa-twitter"></i>@nathaf</li>
+          <li class="count">1044</li>
+          <li class="followers">Followers</li>
+          <li class="num"><i style="margin: 10px;" class="fas fa-caret-up" id="up"></i>99 Today</li>
+        </ul>
+      </div>
+      <div class="top instagram">
+        <ul>
+          <li class="head"><i class="fab fa-instagram"></i>@realnathanf</li>
+          <li class="count">11k</li>
+          <li class="followers">Followers</li>
+          <li class="num"><i style="margin: 10px;" class="fas fa-caret-up" id="up"></i>1099 Today</li>
+        </ul>
+      </div>
+      <div class="top youtube">
+        <ul>
+          <li class="head"><i class="fab fa-youtube"></i>Nathan F.</li>
+          <li class="count">8239</li>
+          <li class="followers">Subscribers</li>
+          <li class="num"><i style="margin: 10px;" class="fas fa-caret-down" id="down"></i>144 Today</li>
+        </ul>
+      </div>
+    </section>
+    <section class="overview">
+      <h4 id="today">Overview-today</h4>
+      <div class="overview-main">
+        <div class="fb-views">
+          <ul>
+            <li class="head">page views</li>
+            <li class="count">87</li>
+          </ul>
+          <ul>
+            <li><i class="fab fa-facebook-square"></i></li>
+            <li class="percent"><i style="margin: 10px;" class="fas fa-caret-up" id="up"></i>3%</li>
+          </ul>
+          </ul>
+        </div>
+        <div class="fb-likes">
+          <ul>
+            <li class="head">likes</li>
+            <li class="count">52</li>
+          </ul>
+          <ul>
+            <li><i class="fab fa-facebook-square"></i></li>
+            <li class="percent"><i style="margin: 10px;" class="fas fa-caret-down" id="down"></i>2%</li>
+          </ul>
+        </div>
+        <div class="insta-likes">
+          <ul>
+            <li class="head">likes</li>
+            <li class="count">5462</li>
+          </ul>
+          <ul>
+            <li><i class="fab fa-instagram"></i></li>
+            <li class="percent"><i style="margin: 10px;" class="fas fa-caret-up" id="up"></i>2257%</li>
+          </ul>
+        </div>
+        <div class="insta-views">
+          <ul>
+            <li class="head">profile views</li>
+            <li class="count">52k</li>
+          </ul>
+          <ul>
+            <li><i class="fab fa-instagram"></i></li>
+            <li class="percent"><i style="margin: 10px;" class="fas fa-caret-up" id="up"></i>1375%</li>
+          </ul>
+        </div>
+        <div class="retweets">
+          <ul>
+            <li class="head">Retweets</li>
+            <li class="count">117</li>
+          </ul>
+          <ul>
+            <li><i class="fab fa-twitter"></i></li>
+            <li class="percent"><i style="margin: 10px;" class="fas fa-caret-up" id="up"></i>303%</li>
+          </ul>
+        </div>
+        <div class="twitter-likes">
+          <ul>
+            <li class="head">Likes</li>
+            <li class="count">507</li>
+          </ul>
+          <ul>
+            <li><i class="fab fa-twitter"></i></li>
+            <li class="percent"><i style="margin: 10px;" class="fas fa-caret-up" id="up"></i>553%</li>
+          </ul>
+        </div>
+        <div class="youtube-likes">
+          <ul>
+            <li class="head">Likes</li>
+            <li class="count">107</li>
+          </ul>
+          <ul>
+            <li><i class="fab fa-youtube"></i></li>
+            <li class="percent"><i style="margin: 10px;" class="fas fa-caret-down" id="down"></i>19%</li>
+          </ul>
+        </div>
+        <div class="youtube-views">
+          <ul>
+            <li class="head">Total views</li>
+            <li class="count">1407</li>
+          </ul>
+          <ul>
+            <li><i class="fab fa-youtube"></i></li>
+            <li class="percent"><i style="margin: 10px;" class="fas fa-caret-down" id="down"></i>12%</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" style="text-decoration: none;">Frontend
+      Mentor</a>. Coded by <a href="https://github.com/tpoornashree" style="text-decoration: none;"> tpoornashree</a>.
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
